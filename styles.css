@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
+    line-height: 1.6;
 }
 
 .container {
@@ -51,12 +52,22 @@ nav ul li a {
 }
 
 /* Portfólio */
+.portfolio-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .portfolio-item {
-    margin-bottom: 40px;
+    margin: 20px;
+    max-width: 300px;
+    text-align: left;
 }
 
 .portfolio-item img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
 }
 
 /* Formulário de Contato */
@@ -68,16 +79,15 @@ form {
     border: 1px solid #ddd;
 }
 
-form label,
-form input,
-form textarea,
-form button {
-    display: block;
+input,
+textarea {
     width: 100%;
+    padding: 10px;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
-form button {
+button {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
@@ -85,7 +95,7 @@ form button {
     cursor: pointer;
 }
 
-form button:hover {
+button:hover {
     background-color: #555;
 }
 
