@@ -39,64 +39,42 @@ nav ul li a {
 
 /* Seções */
 .section {
-    padding: 60px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
-.service {
-    margin-bottom: 40px;
+.content-tab {
+    display: none;
 }
 
-.service h3 {
-    color: #333;
-}
-
-/* Portfólio */
-.portfolio-gallery {
+/* Vídeos e Postagens */
+.video-list, .post-list {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.portfolio-item {
-    margin: 20px;
-    max-width: 300px;
-    text-align: left;
+.video-item, .post-item {
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.portfolio-item img {
-    width: 100%;
+.video-item img, .post-item img {
+    max-width: 100%;
     height: auto;
-    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
-/* Formulário de Contato */
-form {
-    max-width: 600px;
-    margin: 0 auto;
+.video-item:hover, .post-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Detalhes do Conteúdo */
+#detalhes-container {
+    border: 1px solid #ddd;
     padding: 20px;
     background-color: #fff;
-    border: 1px solid #ddd;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
 }
 
 /* Rodapé */
