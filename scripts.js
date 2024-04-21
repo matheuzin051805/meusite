@@ -1,19 +1,52 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Seleciona todos os elementos com a classe 'whatsapp-link'
-    const whatsappLinks = document.querySelectorAll('.whatsapp-link');
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab-link');
+    const contentTabs = document.querySelectorAll('.content-tab');
 
-    // Para cada link de WhatsApp, adiciona um evento de clique
-    whatsappLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault(); // Previne o comportamento padrão do link
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetId = tab.getAttribute('href').substring(1);
+            contentTabs.forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(targetId).style.display = 'block';
+        });
+    });
 
-            const serviceDiv = link.closest('.service'); // Encontra o elemento pai com a classe 'service'
-            const phoneNumber = serviceDiv.dataset.number; // Obtém o número de telefone do atributo 'data-number'
+    const videoItems = document.querySelectorAll('.video-item');
+    const postItems = document.querySelectorAll('.post-item');
+    const detalhesContainer = document.getElementById('detalhes-container');
 
-            // Abre o link do WhatsApp com o número de telefone e mensagem pré-preenchida
-            window.open(`https://wa.me/${phoneNumber}?text=Olá, tenho interesse no serviço "${serviceDiv.querySelector('h3').textContent}"`);
+    function showDetails(contentType, contentId) {
+        if (contentType === 'video') {
+            detalhesContainer.innerHTML = `<h2>Detalhes do Vídeo ${contentId}</h2>
+                                           <p>Descrição do Vídeo ${contentId}.</p>
+                                           <div class="comments">
+                                               <h3>Comentários:</h3>
+                                               <textarea placeholder="Deixe seu comentário..." rows="4"></textarea>
+                                               <button>Enviar Comentário</button>
+                                           </div>`;
+        } else if (contentType === 'post') {
+            detalhesContainer.innerHTML = `<h2>Detalhes da Postagem ${contentId}</h2>
+                                           <p>Conteúdo da Postagem ${contentId}.</p>
+                                           <div class="comments">
+                                               <h3>Comentários:</h3>
+                                               <textarea placeholder="Deixe seu comentário..." rows="4"></textarea>
+                                               <button>Enviar Comentário</button>
+                                           </div>`;
+        }
+    }
 
-            // Pode personalizar a mensagem pré-preenchida conforme necessário
+    videoItems.forEach(video => {
+        video.addEventListener('click', () => {
+            const videoId = video.getAttribute('data-video');
+            showDetails('video', videoId);
+        });
+    });
+
+    postItems.forEach(post => {
+        post.addEventListener('click', () => {
+            const postId = post.getAttribute('data-post');
+            showDetails('post', postId);
         });
     });
 });
