@@ -1,158 +1,98 @@
-/* Reset de Estilos */
-
-body, html {
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 .container {
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Estilos do Cabeçalho */
-
+/* Cabeçalho */
 .header {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
+    text-align: center;
 }
 
-.logo {
-    font-size: 24px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-menu {
+nav ul {
     list-style: none;
     padding: 0;
 }
 
-.nav-menu li {
-    display: inline-block;
+nav ul li {
+    display: inline;
     margin-right: 20px;
 }
 
-.nav-menu li a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-.nav-menu li a:hover {
-    color: #ffcc00;
-}
-
-/* Estilos da Seção Hero */
-
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #666;
-    color: #fff;
-}
-
-.hero h2 {
-    font-size: 4.5vw;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 1.2rem;
-    background-color: #ffcc00;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #ffea00;
-}
-
-/* Estilos da Seção de Serviços */
-
-.services {
-    padding: 80px 0;
-    background-color: #f9f9f9;
+/* Seções */
+.section {
+    padding: 60px 0;
     text-align: center;
 }
 
 .service {
-    background-color: #fff;
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
 
-/* Estilos da Seção de Contato */
-
-.contact {
-    padding: 80px 0;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+.service h3 {
+    color: #333;
 }
 
+/* Portfólio */
+.portfolio-item {
+    margin-bottom: 40px;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+}
+
+/* Formulário de Contato */
 form {
     max-width: 600px;
     margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
 }
 
-input, textarea {
+form label,
+form input,
+form textarea,
+form button {
+    display: block;
     width: 100%;
-    padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    background-color: transparent;
+}
+
+form button {
+    background-color: #333;
     color: #fff;
-}
-
-button {
-    width: 100%;
-    padding: 12px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    background-color: #ffcc00;
-    color: #333;
-    font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #ffea00;
+form button:hover {
+    background-color: #555;
 }
 
-.form-message {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Estilos do Rodapé */
-
+/* Rodapé */
 .footer {
     background-color: #333;
     color: #fff;
-    text-align: center;
     padding: 20px 0;
+    text-align: center;
 }
