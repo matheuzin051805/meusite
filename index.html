@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site Profissional</title>
+    <title>Meu Site Interativo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,90 +11,65 @@
     <!-- Cabeçalho -->
     <header class="header">
         <div class="container">
-            <h1>Meu Site Profissional</h1>
+            <h1>Meu Site Interativo</h1>
             <nav>
                 <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#videos" class="tab-link">Vídeos</a></li>
+                    <li><a href="#postagens" class="tab-link">Postagens</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Seção Sobre -->
-    <section id="sobre" class="section">
-        <div class="container">
-            <h2>Sobre Nós</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
-        </div>
-    </section>
-
-    <!-- Seção Serviços -->
-    <section id="servicos" class="section">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            <div class="services-container">
-                <div class="service">
-                    <h3>Serviço 1</h3>
-                    <p>Descrição do Serviço 1.</p>
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <!-- Aba de Vídeos -->
+        <section id="videos" class="section content-tab">
+            <h2>Vídeos</h2>
+            <div class="video-list">
+                <div class="video-item" data-video="video1">
+                    <img src="video1-thumbnail.jpg" alt="Video 1">
+                    <h3>Video 1</h3>
                 </div>
-                <div class="service">
-                    <h3>Serviço 2</h3>
-                    <p>Descrição do Serviço 2.</p>
+                <div class="video-item" data-video="video2">
+                    <img src="video2-thumbnail.jpg" alt="Video 2">
+                    <h3>Video 2</h3>
                 </div>
-                <div class="service">
-                    <h3>Serviço 3</h3>
-                    <p>Descrição do Serviço 3.</p>
-                </div>
+                <!-- Adicione mais vídeos conforme necessário -->
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção Portfólio -->
-    <section id="portfolio" class="section">
-        <div class="container">
-            <h2>Portfólio</h2>
-            <div class="portfolio-gallery">
-                <div class="portfolio-item">
-                    <img src="placeholder1.jpg" alt="Projeto 1">
-                    <h3>Projeto 1</h3>
-                    <p>Descrição do Projeto 1.</p>
+        <!-- Aba de Postagens -->
+        <section id="postagens" class="section content-tab">
+            <h2>Postagens</h2>
+            <div class="post-list">
+                <div class="post-item" data-post="post1">
+                    <h3>Postagem 1</h3>
+                    <p>Conteúdo da Postagem 1.</p>
                 </div>
-                <div class="portfolio-item">
-                    <img src="placeholder2.jpg" alt="Projeto 2">
-                    <h3>Projeto 2</h3>
-                    <p>Descrição do Projeto 2.</p>
+                <div class="post-item" data-post="post2">
+                    <h3>Postagem 2</h3>
+                    <p>Conteúdo da Postagem 2.</p>
                 </div>
-                <div class="portfolio-item">
-                    <img src="placeholder3.jpg" alt="Projeto 3">
-                    <h3>Projeto 3</h3>
-                    <p>Descrição do Projeto 3.</p>
-                </div>
+                <!-- Adicione mais postagens conforme necessário -->
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção Contato -->
-    <section id="contato" class="section">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <form>
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu Email" required>
-                <textarea placeholder="Sua Mensagem" rows="4" required></textarea>
-                <button type="submit">Enviar Mensagem</button>
-            </form>
-        </div>
-    </section>
+        <!-- Detalhes do Conteúdo Selecionado -->
+        <section id="detalhes" class="section">
+            <div id="detalhes-container">
+                Selecione um vídeo ou postagem para visualizar os detalhes e comentários.
+            </div>
+        </section>
+    </main>
 
     <!-- Rodapé -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Meu Site Profissional. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Meu Site Interativo. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <script src="scripts.js"></script>
 </body>
 </html>
